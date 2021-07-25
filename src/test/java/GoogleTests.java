@@ -18,3 +18,5 @@ public class GoogleTests {
         $("#search").shouldHave(text("selenide.org"));
     }
 }
+
+
