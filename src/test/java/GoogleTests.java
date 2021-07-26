@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -12,10 +13,14 @@ public class GoogleTests {
         open("https://www.google.com/");
 
         // Ввести Selenide в поиск
-        $(byName("q")).setValue("Selenide").pressEnter();
+        $(byName("q")).setValue("Selenide").pressEnter();  
 
         // Проверить, что Selenide появился в результатах поиска
         $("#search").shouldHave(text("selenide.org"));
+
+        System.out.println("Test commit ");
+        Assertions.assertEquals(11,100);
+
     }
 }
 
