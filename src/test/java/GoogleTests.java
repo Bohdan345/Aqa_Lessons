@@ -13,12 +13,13 @@ public class GoogleTests {
         open("https://www.google.com/");
 
         // Ввести Selenide в поиск
-        $(byName("q")).setValue("Selenide").pressEnter();  
+        $(byName("q")).setValue("Selenide").pressEnter();
 
         // Проверить, что Selenide появился в результатах поиска
         $("#search").shouldHave(text("selenide.org"));
 
         System.out.println("Test commit ");
+        System.out.println("Test commit 2  ");
         Assertions.assertEquals(11,100);
 
     }
